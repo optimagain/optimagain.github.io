@@ -10,7 +10,7 @@ const CONFIG = {
   // ---- 1. GOOGLE ANALYTICS 4 -------------------------------
   // Get this from analytics.google.com → Admin → Data Streams.
   // Looks like "G-ABC1234XYZ". Leave as "" to disable analytics.
-  GA4_ID: "",
+  GA4_ID: "G-22HEE9F1DR",
 
   // ---- 2. GETRESPONSE CAMPAIGN TOKEN -----------------------
   // In GetResponse: Menu → Lists → (your list) → Settings.
@@ -19,7 +19,7 @@ const CONFIG = {
   // Every bridge page posts to this one list; the lead magnet is
   // passed as a custom field so your automation knows which PDF
   // to send. See README.md, section "Wiring GetResponse".
-  GR_CAMPAIGN_TOKEN: "PASTE_TOKEN_HERE",
+  GR_CAMPAIGN_TOKEN: "PrZmQ",
 
   // ---- 3. SITE ROOT ----------------------------------------
   // Used to build the thank-you URL. No trailing slash.
@@ -91,7 +91,7 @@ const CONFIG = {
 
     // Attribution — which Pin sent this subscriber.
     hidden("custom_source", utms.utm_source || "direct");
-    hidden("custom_campaign", utms.utm_campaign || magnet);
+    hidden("custom_campaignname", utms.utm_campaign || magnet);
     hidden("custom_pin", utms.utm_content || "");
 
     form.addEventListener("submit", function () {
